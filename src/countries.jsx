@@ -200,7 +200,7 @@ function CountryDetails(p) {
                                 <div>Population: <span class="country-info">{fnull(c.population?.toLocaleString())}</span></div>
                                 <div>Region: <span class="country-info">{fnull(c.region)}</span></div>
                                 <div>Sub-Region: <span class="country-info">{fnull(c.subregion)}</span></div>
-                                <div>Capital: <span class="country-info">{fnull(c.capital)}</span></div>
+                                <div>Capital: <span class="country-info">{fnull(c.capital?.join(", "))}</span></div>
                             </div>
                             <div>
                                 <div>Top-level Domains: <span class="country-info">{fnull(c.tld?.join(", "))}</span></div>

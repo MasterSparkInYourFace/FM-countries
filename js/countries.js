@@ -211,7 +211,7 @@ function CountryDetails(p) {
     class: "country-info"
   }, fnull(c.subregion))), /*#__PURE__*/React.createElement("div", null, "Capital: ", /*#__PURE__*/React.createElement("span", {
     class: "country-info"
-  }, fnull(c.capital)))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", null, "Top-level Domains: ", /*#__PURE__*/React.createElement("span", {
+  }, fnull(c.capital?.join(", "))))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", null, "Top-level Domains: ", /*#__PURE__*/React.createElement("span", {
     class: "country-info"
   }, fnull(c.tld?.join(", ")))), /*#__PURE__*/React.createElement("div", null, "Currencies: ", /*#__PURE__*/React.createElement("span", {
     class: "country-info"
