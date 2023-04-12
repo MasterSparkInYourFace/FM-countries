@@ -1,0 +1,390 @@
+@font-face {
+  font-family: NunitoSans;
+  src: url("./fonts/NunitoSans-Light.ttf") format(truetype);
+  font-weight: 300;
+}
+@font-face {
+  font-family: NunitoSans;
+  src: url("./fonts/NunitoSans-SemiBold.ttf") format(truetype);
+  font-weight: 600;
+}
+@font-face {
+  font-family: NunitoSans;
+  src: url("./fonts/NunitoSans-ExtraBold.ttf") format(truetype);
+  font-weight: 800;
+}
+html {
+  min-height: 100vh;
+}
+
+body {
+  font-family: NunitoSans, sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+.theme-dark {
+  color: white;
+}
+
+.theme-light {
+  color: hsl(200, 15%, 8%);
+}
+
+.antscreen {
+  color: white;
+  display: none;
+  text-align: center;
+}
+@media only screen and (max-width: 360px) {
+  .antscreen {
+    display: block;
+  }
+}
+
+p.antscreen {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 30px 10px 30px;
+}
+
+.button {
+  user-select: none;
+  cursor: pointer;
+}
+
+#ui {
+  font-size: 14px;
+  background-color: hsl(207, 26%, 17%);
+  min-height: 100%;
+}
+
+#ui.theme-light {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.element-style {
+  border-radius: 5px;
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.element-style.theme-light {
+  background-color: white;
+}
+
+.svg.theme-light {
+  filter: brightness(0);
+}
+
+#header {
+  border-radius: 0;
+  padding: 10px 60px 10px 60px;
+}
+@media only screen and (max-width: 699px) {
+  #header {
+    padding: 20px 15px 20px 15px;
+  }
+}
+
+#header-contents {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 360px) {
+  #header-contents {
+    display: none;
+  }
+}
+
+#header-contents > h1 {
+  display: inline;
+  font-size: 24px;
+  font-weight: 800;
+}
+@media only screen and (max-width: 699px) {
+  #header-contents > h1 {
+    font-size: 18px;
+  }
+}
+
+#theme-switch {
+  display: inline-block;
+  font-weight: 600;
+  user-select: none;
+}
+
+#theme-switch > img {
+  vertical-align: middle;
+  display: inline-block;
+  height: 1.1em;
+  margin-right: 10px;
+}
+
+.ui-contents {
+  margin: 40px 60px 0 60px;
+}
+@media only screen and (max-width: 699px) {
+  .ui-contents {
+    margin: 30px 20px 0 20px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .ui-contents {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #search-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+#search-container {
+  display: flex;
+  flex-basis: 33%;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 15px 30px 15px 30px;
+}
+@media only screen and (max-width: 699px) {
+  #search-container {
+    margin-bottom: 30px;
+  }
+}
+
+#search-container > img {
+  cursor: pointer;
+  height: 1.2em;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
+#search {
+  appearance: none;
+  border: none;
+  background: none;
+  caret-color: white;
+  color: white;
+  flex-basis: 100%;
+  font-family: NunitoSans, sans-serif;
+  font-size: 14px;
+}
+
+#search.theme-light {
+  caret-color: hsl(200, 15%, 8%);
+  color: hsl(200, 15%, 8%);
+}
+
+#search:focus {
+  outline: none;
+}
+
+#search::placeholder {
+  color: white;
+}
+
+#search.theme-light::placeholder {
+  color: hsl(200, 15%, 8%);
+}
+
+#filter-region .dropdown-options {
+  user-select: none;
+}
+
+#filter-region {
+  width: 200px;
+  padding: 15px;
+}
+
+#dropdown-deco {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#dropdown-deco > img {
+  height: 0.4em;
+}
+
+.dropdown-options {
+  position: absolute;
+  transform: translateX(-15px);
+  margin-top: 20px;
+  padding: 10px 0 10px 0;
+  width: 230px;
+}
+
+.option {
+  padding: 5px 0 5px 0;
+}
+
+.option.selected {
+  background-color: hsl(219, 78%, 53%);
+  color: white;
+}
+
+.option:not(.selected):hover {
+  background-color: hsl(208, 24%, 33%);
+}
+
+.option.theme-light:not(.selected):hover {
+  background-color: hsl(0, 0%, 87%);
+}
+
+.option > span {
+  padding: 0 15px 0 15px;
+}
+
+#country-listing {
+  padding: 45px 0 45px 0;
+  display: grid;
+  justify-content: space-between;
+  column-gap: 5%;
+  row-gap: 50px;
+  grid-auto-rows: 25em;
+  grid-template-columns: repeat(auto-fill, minmax(0, 20em));
+}
+@media only screen and (max-width: 799px) {
+  #country-listing {
+    grid-template-columns: repeat(2, minmax(0, 20em));
+  }
+}
+@media only screen and (max-width: 699px) {
+  #country-listing {
+    justify-content: center;
+    grid-template-columns: minmax(0, 20em);
+    padding: 30px;
+  }
+}
+
+.country-card {
+  overflow: hidden;
+}
+
+.country-card > img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.country-details {
+  padding: 0 20px 20px 20px;
+}
+
+.country-details > div {
+  font-weight: 600;
+}
+
+.info-padded {
+  margin-top: 5px;
+}
+
+.country-info {
+  font-weight: 400;
+  white-space: normal;
+}
+
+#country-data {
+  font-size: 14px;
+  padding-bottom: 45px;
+}
+
+#back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 10px 25px;
+  width: min-content;
+}
+
+#back-button > .svg {
+  height: 0.7em;
+  margin-right: 10px;
+}
+
+#details-view {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 699px) {
+  #details-view {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #details-view > img {
+    max-width: 50%;
+    margin-right: 5%;
+  }
+}
+@media only screen and (max-width: 699px) {
+  #details-view > img {
+    max-width: 100%;
+    padding-bottom: 40px;
+  }
+}
+
+#details-view > div {
+  max-height: 100vb;
+}
+
+#details-data {
+  display: flex;
+  line-height: 2em;
+  font-weight: 600;
+}
+@media only screen and (max-width: 1000px) {
+  #details-data {
+    display: block;
+  }
+}
+
+#details-data > div {
+  margin-right: 50px;
+  margin-bottom: 40px;
+  white-space: nowrap;
+}
+
+#details-header {
+  margin-top: 0;
+}
+
+#border-countries {
+  font-weight: 600;
+}
+@media only screen and (min-width: 700px) {
+  #border-countries {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+#border-countries > span {
+  white-space: nowrap;
+  margin-right: 1em;
+}
+@media only screen and (max-width: 699px) {
+  #border-countries > span {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.bc-button {
+  display: inline-block;
+  padding: 5px 15px;
+  margin: 5px;
+  width: fit-content;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style.css.map */

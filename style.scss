@@ -1,0 +1,377 @@
+@use "sass:map";
+
+@use "macro";
+
+$colors: (
+    dm-elements: hsl(209, 23%, 22%),
+    dm-bg: hsl(207, 26%, 17%),
+    dm-hover: hsl(208, 24%, 33%),
+    lm-text: hsl(200, 15%, 8%),
+    lm-input: hsl(0, 0%, 52%),
+    lm-hover: hsl(0, 0%, 87%),
+    lm-bg: hsl(0, 0%, 98%),
+    select: hsl(219, 78%, 53%)
+);
+
+$phonesbad: 699px;
+$monitorsgood: calc($phonesbad + 1px);
+$antscreen: 360px;
+
+@function c($color) { @return map.get($colors, $color); }
+
+@include macro.wfont(NunitoSans, (
+    (300, Light),
+    (600, SemiBold),
+    (800, ExtraBold)
+));
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: NunitoSans, sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+.theme-dark {
+    color: white;
+}
+
+.theme-light {
+    color: c(lm-text);
+}
+
+.antscreen {
+    color: white;
+    display: none;
+    text-align: center;
+    @include macro.scrle($antscreen) {
+        display: block;
+    }
+}
+
+p.antscreen {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 30px 10px 30px;
+}
+
+.button {
+    user-select: none;
+    cursor: pointer;
+}
+
+#ui {
+    font-size: 14px;
+    background-color: c(dm-bg);
+    min-height: 100%;
+}
+
+#ui.theme-light {
+    background-color: c(lm-bg);
+}
+
+.element-style {
+    border-radius: 5px;
+    background-color: c(dm-elements);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.element-style.theme-light {
+    background-color: white;
+}
+
+.svg.theme-light {
+    filter: brightness(0);
+}
+
+#header {
+    border-radius: 0;
+    padding: 10px 60px 10px 60px;
+    @include macro.scrle($phonesbad) {
+        padding: 20px 15px 20px 15px;
+    }
+}
+
+#header-contents {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    @include macro.scrle($antscreen) {
+        display: none;
+    }
+}
+
+#header-contents>h1 {
+    display: inline;
+    font-size: 24px;
+    font-weight: 800;
+    @include macro.scrle($phonesbad) {
+        font-size: 18px;
+    }
+}
+
+#theme-switch {
+    display: inline-block;
+    font-weight: 600;
+    user-select: none;
+}
+
+#theme-switch>img {
+    vertical-align: middle;
+    display: inline-block;
+    height: 1.1em;
+    margin-right: 10px;
+}
+
+.ui-contents {
+    margin: 40px 60px 0 60px;
+    @include macro.scrle($phonesbad) {
+        margin: 30px 20px 0 20px;
+    }
+    @include macro.scrle($antscreen) {
+        display: none;
+    }
+}
+
+#search-controls {
+    @include macro.scrge($monitorsgood) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+#search-container {
+    display: flex;
+    flex-basis: 33%;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 15px 30px 15px 30px;
+    @include macro.scrle($phonesbad) {
+        margin-bottom: 30px;
+    }
+}
+
+#search-container>img {
+    cursor: pointer;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+#search {
+    appearance: none;
+    border: none;
+    background: none;
+    caret-color: white;
+    color: white;
+    flex-basis: 100%;
+    font-family: NunitoSans, sans-serif;
+    font-size: 14px;
+}
+
+#search.theme-light {
+    caret-color: c(lm-text);
+    color: c(lm-text);
+}
+
+#search:focus {
+    outline: none;
+}
+
+#search::placeholder {
+    color: white;
+}
+
+#search.theme-light::placeholder {
+    color: c(lm-text);
+}
+
+// absolute elements give me brain cancer. you can't use percentages at all
+// and you have to put transforms everywhere
+// why the hell can you not refer to the actual widths of other elements
+// in this dumb language
+#filter-region .dropdown-options {
+    user-select: none;
+}
+
+#filter-region {
+    width: 200px;
+    padding: 15px;
+}
+
+#dropdown-deco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dropdown-deco>img {
+    height: 0.4em;
+}
+
+.dropdown-options {
+    position: absolute;
+    transform: translateX(-15px);
+    margin-top: 20px;
+    padding: 10px 0 10px 0;
+    width: 230px;
+}
+
+.option {
+    padding: 5px 0 5px 0;
+}
+
+.option.selected {
+    background-color: c(select);
+    color: white;
+}
+
+.option:not(.selected):hover {
+    background-color: c(dm-hover);
+}
+
+.option.theme-light:not(.selected):hover {
+    background-color: c(lm-hover);
+}
+
+.option>span {
+    padding: 0 15px 0 15px;
+}
+
+#country-listing {
+    padding: 45px 0 45px 0;
+    display: grid;
+    justify-content: space-between;
+    column-gap: 5%;
+    row-gap: 50px;
+    grid-auto-rows: 25em;
+    grid-template-columns: repeat(auto-fill, minmax(0, 20em));
+    @include macro.scrle(799px) {
+        grid-template-columns: repeat(2, minmax(0, 20em));
+    }
+    @include macro.scrle($phonesbad) {
+        justify-content: center;
+        grid-template-columns: minmax(0, 20em);
+        padding: 30px;
+    }
+}
+
+// gets rid of the sharp img corners
+.country-card {
+    overflow: hidden;
+}
+
+.country-card>img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.country-details {
+    padding: 0 20px 20px 20px;
+}
+
+.country-details>div {
+    font-weight: 600;
+}
+
+.info-padded {
+    margin-top: 5px;
+}
+
+.country-info {
+    font-weight: 400;
+    white-space: normal;
+}
+
+#country-data {
+    font-size: 14px;
+    padding-bottom: 45px;
+}
+
+#back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    padding: 10px 25px;
+    width: min-content;
+}
+
+#back-button>.svg {
+    height: 0.7em;
+    margin-right: 10px;
+}
+
+#details-view {
+    display: flex;
+    align-items: center;
+    @include macro.scrle($phonesbad) {
+        display: block;
+    }
+}
+
+#details-view>img {
+    @include macro.scrge($monitorsgood) {
+        max-width: 50%;
+        margin-right: 5%;
+    }
+    @include macro.scrle($phonesbad) {
+        max-width: 100%;
+        padding-bottom: 40px;
+    }
+}
+
+#details-view>div {
+    max-height: 100vb;
+}
+
+#details-data {
+    display: flex;
+    line-height: 2em;
+    font-weight: 600;
+    @include macro.scrle(1000px) {
+        display: block;
+    }
+}
+
+#details-data>div {
+    margin-right: 50px;
+    margin-bottom: 40px;
+    white-space: nowrap;
+}
+
+#details-header {
+    margin-top: 0;
+}
+
+#border-countries {
+    font-weight: 600;
+    @include macro.scrge($monitorsgood) {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+}
+
+#border-countries>span {
+    white-space: nowrap;
+    margin-right: 1em;
+    @include macro.scrle($phonesbad) {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.bc-button {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 5px;
+    width: fit-content;
+    font-weight: 400;
+}

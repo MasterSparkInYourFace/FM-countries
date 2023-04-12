@@ -1,0 +1,47 @@
+@use "sass:list";
+@use "sass:meta";
+
+@mixin -screen($w, $r) {
+    @at-root {
+        @media only screen and (#{$r}: $w) {
+            & {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin scrle($width) {
+    @include -screen($width, max-width) {
+        @content;
+    }
+}
+
+@mixin scrge($width) {
+    @include -screen($width, min-width) {
+        @content;
+    }
+}
+
+@mixin pill($height) {
+    height: $height;
+    border-radius: calc($height / 2) / calc($height / 2);
+}
+
+@mixin wfont($name, $wsrc) {
+    @each $p in $wsrc {
+        @font-face {
+            font-family: $name;
+            // assume truetype since I mostly just use fonts from google
+            src: url("./fonts/" + $name + "-" + list.nth($p, 2) + ".ttf")
+                format(truetype);
+            font-weight: list.nth($p, 1);
+        }
+    }
+}
+
+@mixin gfont($name, $variations, $weights: 400) {
+    font-family: $name;
+    src: url("./fonts/" + $name + "-VariableFont_" + $variations + ".ttf") format(truetype) tech(variations);
+    font-weight: $weights;
+}

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="198.41786mm"
+   height="206.0479mm"
+   viewBox="0 0 198.41786 206.0479"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="crescent.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="238.29498"
+     inkscape:cy="492.14632"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1072"
+     inkscape:window-y="845"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer5"
+     showborder="true" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect2323"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect1008"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <inkscape:path-effect
+       effect="powerclip"
+       id="path-effect989"
+       is_visible="true"
+       lpeversion="1"
+       inverse="true"
+       flatten="false"
+       hide_clip="false"
+       message="Use fill-rule evenodd on &lt;b&gt;fill and stroke&lt;/b&gt; dialog if no flatten result after convert clip to paths." />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath985">
+      <circle
+         style="display:none;fill:#000000;stroke-width:0.264583"
+         id="circle987"
+         cx="124.00329"
+         cy="129.4967"
+         r="56.644421"
+         inkscape:label="path956" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipath_lpe_path-effect1008">
+      <circle
+         style="display:none;fill:#000000;stroke-width:0.264583"
+         id="circle1010"
+         cx="124.00329"
+         cy="129.4967"
+         r="56.644421"
+         inkscape:label="path956" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath2319">
+      <path
+         id="path2321"
+         style="display:none;fill:#000000;stroke:none;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1"
+         d="m 50.102962,72.970533 c -10.954478,7.970398 -20.0816,18.264158 -26.683212,30.065007 -7.464895,13.35478 -11.583113,28.61116 -11.825702,43.90803 -0.267527,15.16459 3.257958,30.41201 10.133914,43.93126 7.993262,15.75774 20.610172,29.16459 35.820311,38.09961 11.667022,6.8748 24.799542,11.16865 38.27344,12.5 19.081117,1.89515 38.787577,-2.26139 55.487627,-11.87349 5.3483,-3.05919 10.38834,-6.65303 15.04167,-10.69096 -17.67571,3.97498 -36.40733,3.31393 -53.69297,-2.16147 C 95.344725,211.30282 79.53422,201.19429 67.291097,187.7944 56.099815,175.63717 48.014661,160.69109 43.78264,144.72883 39.45085,128.48267 39.091514,111.16076 42.993142,94.791289 44.81015,87.01491 47.530791,79.450374 51.061947,72.286938 c -0.319662,0.227865 -0.639324,0.455729 -0.958985,0.683595 z" />
+      <path
+         id="lpe_path-effect2323"
+         style="display:inline;fill:#000000;stroke:none;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1"
+         class="powerclip"
+         d="M -4.0532878,41.505688 H 204.36458 V 257.55358 H -4.0532878 Z M 50.102962,72.970533 c -10.954478,7.970398 -20.0816,18.264158 -26.683212,30.065007 -7.464895,13.35478 -11.583113,28.61116 -11.825702,43.90803 -0.267527,15.16459 3.257958,30.41201 10.133914,43.93126 7.993262,15.75774 20.610172,29.16459 35.820311,38.09961 11.667022,6.8748 24.799542,11.16865 38.27344,12.5 19.081117,1.89515 38.787577,-2.26139 55.487627,-11.87349 5.3483,-3.05919 10.38834,-6.65303 15.04167,-10.69096 -17.67571,3.97498 -36.40733,3.31393 -53.69297,-2.16147 C 95.344725,211.30282 79.53422,201.19429 67.291097,187.7944 56.099815,175.63717 48.014661,160.69109 43.78264,144.72883 39.45085,128.48267 39.091514,111.16076 42.993142,94.791289 44.81015,87.01491 47.530791,79.450374 51.061947,72.286938 c -0.319662,0.227865 -0.639324,0.455729 -0.958985,0.683595 z" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="L1"
+     style="display:none"
+     transform="translate(-0.94671224,-46.505688)">
+    <path
+       id="path2297"
+       style="display:inline;fill:#ffffff;stroke:none;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1"
+       d="M 84.75245,46.505688 A 104.05336,104.05336 0 0 0 0.94671224,148.49998 104.05336,104.05336 0 0 0 104.99979,252.55358 104.05336,104.05336 0 0 0 199.36458,192.23529 92.770302,92.770302 0 0 1 143.58917,210.94991 92.770302,92.770302 0 0 1 50.81912,118.17987 92.770302,92.770302 0 0 1 84.75245,46.505688 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="L2"
+     style="display:inline">
+    <path
+       id="path2158"
+       style="display:inline;fill:#ffffff;stroke:none;stroke-width:5.29167;stroke-dasharray:none;stroke-opacity:1"
+       d="M 84.75245,46.505688 A 104.05336,104.05336 0 0 0 0.94671224,148.49998 104.05336,104.05336 0 0 0 104.99979,252.55358 104.05336,104.05336 0 0 0 199.36458,192.23529 92.770302,92.770302 0 0 1 143.58917,210.94991 92.770302,92.770302 0 0 1 50.81912,118.17987 92.770302,92.770302 0 0 1 84.75245,46.505688 Z"
+       transform="translate(-0.94671224,-46.505688)"
+       clip-path="url(#clipPath2319)"
+       inkscape:path-effect="#path-effect2323"
+       inkscape:original-d="M 84.75245,46.505688 A 104.05336,104.05336 0 0 0 0.94671224,148.49998 104.05336,104.05336 0 0 0 104.99979,252.55358 104.05336,104.05336 0 0 0 199.36458,192.23529 92.770302,92.770302 0 0 1 143.58917,210.94991 92.770302,92.770302 0 0 1 50.81912,118.17987 92.770302,92.770302 0 0 1 84.75245,46.505688 Z" />
+  </g>
+</svg>
