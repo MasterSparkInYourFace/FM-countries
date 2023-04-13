@@ -217,7 +217,7 @@ function CountryDetails(p) {
     class: "country-info"
   }, objformat(c.currencies, "name"))), /*#__PURE__*/React.createElement("div", null, "Languages: ", /*#__PURE__*/React.createElement("span", {
     class: "country-info"
-  }, objformat(c.languages))))), p.bordering === undefined ? /*#__PURE__*/React.createElement(React.Fragment, null) : /*#__PURE__*/React.createElement("div", {
+  }, objformat(c.languages))))), !p.bordering?.length ? /*#__PURE__*/React.createElement(React.Fragment, null) : /*#__PURE__*/React.createElement("div", {
     id: "border-countries"
   }, /*#__PURE__*/React.createElement("span", null, "Bordering Countries:"), /*#__PURE__*/React.createElement("div", null, p.bordering.map(b => /*#__PURE__*/React.createElement(BorderCountryButton, {
     theme: p.theme,
@@ -257,7 +257,7 @@ function UI(p) {
       get: displayedCountry,
       set: setDisplayedCountry
     },
-    bordering: displayedCountry.borders?.map(c => p.data.filter(cd => cd.cca3 === c)[0])
+    bordering: displayedCountry.borders?.map(c => p.data.find(cd => cd.cca3 === c))
   }));
 }
 function main() {

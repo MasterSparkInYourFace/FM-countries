@@ -210,7 +210,7 @@ function CountryDetails(p) {
                             </div>
                         </div>
                         {
-                            p.bordering === undefined ? <></> :
+                            !p.bordering?.length ? <></> :
                             <div id="border-countries">
                                 <span>Bordering Countries:</span>
                                 <div>
@@ -248,7 +248,7 @@ function UI(p) {
                 <CountryDetails theme={theme}
                     dcState={{get: displayedCountry, set: setDisplayedCountry}}
                     bordering={displayedCountry.borders?.map(c =>
-                        p.data.filter(cd => cd.cca3 === c)[0])}/>}
+                        p.data.find(cd => cd.cca3 === c))}/>}
         </div>
     );
 }
